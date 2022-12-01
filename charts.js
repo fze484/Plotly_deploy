@@ -92,13 +92,17 @@ function buildCharts(sample) {
     y: yticks,
     orientation: 'h',
     text: [labs],
-    type: "bar"
-  
+    type: "bar",
+    options: {
+      maintainAspectRatio: false,
+    }
   };
    var data = [barData];
    // 9. Create the layout for the bar chart. 
      var barLayout = {
      title:'Top 10 bacterial species (OTUs)',
+     height: 425,
+     //smargin: { t: 30, l: 150 }
    };
    
     // 10. Use Plotly to plot the data with the layout. 
@@ -142,8 +146,11 @@ function buildBubbles(samp) {
     var bubbleLayout = {
       title: 'Bacteria cultures per sample',
       showlegend: false,
-      height: 600,
-      width: 600
+      margin: {t: 0},
+      hovermode: "closest",
+      margin: {t : 30},
+      //height: 600,
+      //width: 600
     };
 
     // 3. Use Plotly to plot the data with the layout.
@@ -196,7 +203,7 @@ function buildBubbles(samp) {
     // Create the layout for the gauge chart.
     var gaugeLayout = {  
       width: 500, 
-      height: 450, 
+      height: 425, 
       margin: { t: 0, b: 0 } 
     };
 
