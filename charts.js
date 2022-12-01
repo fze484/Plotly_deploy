@@ -142,7 +142,6 @@ function buildBubbles(samp) {
     var bubbleLayout = {
       title: 'Bacteria cultures per sample',
       showlegend: false,
-      
       height: 600,
       width: 600
     };
@@ -169,7 +168,7 @@ function buildBubbles(samp) {
     // Create the trace for the gauge chart.
     var gaugeData = [{ 
       value: freq,
-      title: { text: "Belly button washing frequency" },
+      title:  { text: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week"} ,
       subtitle: {
         display: true,
         text: 'Scrubs per week'
@@ -177,7 +176,7 @@ function buildBubbles(samp) {
       type: "indicator",
       mode: "gauge+number",
       gauge: {
-        axis: { range: [null, 10], tickwidth: 1, tickcolor: "darkblue" },
+        axis: { range: [null, 10], tickwidth: 1, tickcolor: "black" },
         bar: { color: "black" },
         bgcolor: "white",
         borderwidth: 2,
@@ -196,8 +195,8 @@ function buildBubbles(samp) {
     
     // Create the layout for the gauge chart.
     var gaugeLayout = {  
-      width: 600, 
-      height: 500, 
+      width: 500, 
+      height: 450, 
       margin: { t: 0, b: 0 } 
     };
 
